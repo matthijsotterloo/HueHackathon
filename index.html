@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>SmartHome</title>
+  <title>Philips Hue</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
@@ -38,12 +38,12 @@
   <template is="auto-binding" id="mainPage">
     <core-header-panel>
       <core-toolbar>
-        SmartHome
+        Philips Hue
       </core-toolbar>
       <div vertical layout>
         <div horizontal layout>
           <paper-card>
-            <paper-input-decorator floatingLabel label="Ask something...">
+            <paper-input-decorator floatingLabel label="Wat kan ik voor je doen...">
               <input type="text" name="askInput" value="{{vCmdResult}}"/>
             </paper-input-decorator>
           </paper-card>
@@ -53,7 +53,7 @@
             <paper-card>
               <span>{{values}}</span>
               <div horizontal layout end-justified>
-                <paper-button on-click="{{repeat}}">REPEAT</paper-button>
+                <paper-button on-click="{{repeat}}">HERHALEN</paper-button>
               </div>
             </paper-card>
           </div>
@@ -70,7 +70,7 @@
       method="POST"
       params=''></core-ajax>
 
-  <voice-player autoplay text="Hello, what can I do for you ?" accent="en-US" id="vPlayer"></voice-player>
+  <voice-player autoplay text="Hello, welcome to hue?" accent="en-US" id="vPlayer"></voice-player>
   <voice-recognition continuous="false" id="vCmd"></voice-recognition>
   <script>
     var mainPage = document.getElementById("mainPage");
@@ -81,18 +81,18 @@
     mainPage.itsListening = false;
     mainPage.commandLog = [];
 
-    mainPage.commandLog.unshift("allumer lumière chambre");
+    mainPage.commandLog.unshift("main lights");
 
     /** VOICE RECOGNITION **/
     var isActivated = false;
 
     mainPage.startRecognition = function(){
-      voicePlayer.setAttribute("text","Let me do that for you...");
+      voicePlayer.setAttribute("text","Gaan we regelen...");
       voiceRecognition.start();
     }
 
     mainPage.repeat = function(e,detail,sender){
-      voicePlayer.setAttribute("text","Repeating the action...");
+      voicePlayer.setAttribute("text","Actie herhalen...");
       voicePlayer.textChanged();
       doAction(sender.parentNode.parentNode.querySelector("span").innerText);
     }
@@ -136,5 +136,7 @@
       voicePlayer.speak();
     }
   </script>
+</body>
+</html>t>
 </body>
 </html>

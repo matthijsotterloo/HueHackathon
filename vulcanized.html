@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-  <title>Hue Hackathon</title>
+  <title>Philips Hue</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
@@ -291,7 +291,7 @@ html /deep/ [segment], html /deep/ segment {
 
 
 
-  
+
 
 
 
@@ -319,20 +319,20 @@ html /deep/ core-icon {
 
 
 
-  
 
 
-  
+
+
 
 
 
   <!-- ICONS ELEMENTS !-->
-  
+
 
 
 
   <!-- PAPERS ELEMENTS !-->
-  
+
 
 
 <style shim-shadowdom="">/*
@@ -417,14 +417,14 @@ html /deep/ .paper-shadow-bottom-z-5 {
 
 
 
-  
 
 
 
 
 
 
-  
+
+
 
 
 
@@ -451,12 +451,12 @@ html /deep/ .paper-shadow-bottom-z-5 {
 
 
   <!-- CUSTOM ELEMENTS !-->
-  
-  
+
+
 
 <!-- Define your custom element -->
 
-  
+
 
 <!-- Define your custom element -->
 
@@ -517,7 +517,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
         }
         return xhr;
       },
-    
+
       toQueryString: function(params) {
         var r = [];
         for (var n in params) {
@@ -531,7 +531,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
       isBodyMethod: function(method) {
         return this.bodyMethods[(method || '').toUpperCase()];
       },
-      
+
       bodyMethods: {
         POST: 1,
         PUT: 1,
@@ -558,7 +558,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
     });
 
   </script>
-  
+
 </polymer-element>
 <polymer-element name="core-ajax" hidden="" attributes="url handleAs auto params response error method headers body contentType withCredentials progress loading" assetpath="bower_components/core-ajax/">
 <script>
@@ -937,28 +937,28 @@ html /deep/ .paper-shadow-bottom-z-5 {
 <script>
 
   (function() {
-    
+
     var SKIP_ID = 'meta';
     var metaData = {}, metaArray = {};
 
     Polymer('core-meta', {
-      
+
       /**
        * The type of meta-data.  All meta-data with the same type with be
        * stored together.
-       * 
+       *
        * @attribute type
        * @type string
        * @default 'default'
        */
       type: 'default',
-      
+
       alwaysPrepare: true,
-      
+
       ready: function() {
         this.register(this.id);
       },
-      
+
       get metaArray() {
         var t = this.type;
         if (!metaArray[t]) {
@@ -966,7 +966,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
         }
         return metaArray[t];
       },
-      
+
       get metaData() {
         var t = this.type;
         if (!metaData[t]) {
@@ -974,7 +974,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
         }
         return metaData[t];
       },
-      
+
       register: function(id, old) {
         if (id && id !== SKIP_ID) {
           this.unregister(this, old);
@@ -982,7 +982,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
           this.metaArray.push(this);
         }
       },
-      
+
       unregister: function(meta, id) {
         delete this.metaData[id || meta.id];
         var i = this.metaArray.indexOf(meta);
@@ -990,10 +990,10 @@ html /deep/ .paper-shadow-bottom-z-5 {
           this.metaArray.splice(i, 1);
         }
       },
-      
+
       /**
        * Returns a list of all meta-data elements with the same type.
-       * 
+       *
        * @property list
        * @type array
        * @default []
@@ -1001,7 +1001,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
       get list() {
         return this.metaArray;
       },
-      
+
       /**
        * Retrieves meta-data by ID.
        *
@@ -1012,19 +1012,19 @@ html /deep/ .paper-shadow-bottom-z-5 {
       byId: function(id) {
         return this.metaData[id];
       }
-      
+
     });
-    
+
   })();
-  
+
 </script>
 </polymer-element>
 <polymer-element name="core-iconset" extends="core-meta" attributes="src width icons iconSize" assetpath="bower_components/core-iconset/">
-  
+
   <script>
-  
+
     Polymer('core-iconset', {
-  
+
       /**
        * The URL of the iconset image.
        *
@@ -1091,7 +1091,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
         this.iconNames = [];
         this.themes = {};
       },
-  
+
       ready: function() {
         // TODO(sorvell): ensure iconset's src is always relative to the main
         // document
@@ -1142,7 +1142,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
        * @param {String|Number} icon The name of the icon or the index of the
        * icon within in the icon image.
        * @param {String} theme The name of the theme.
-       * @returns {Object} An object specifying the offset of the given icon 
+       * @returns {Object} An object specifying the offset of the given icon
        * within the icon resource file; `offsetX` is the horizontal offset and
        * `offsetY` is the vertical offset. Both values are in pixel units.
        */
@@ -1164,14 +1164,14 @@ html /deep/ .paper-shadow-bottom-z-5 {
 
       /**
        * Applies an icon to the given element as a css background image. This
-       * method does not size the element, and it's often necessary to set 
+       * method does not size the element, and it's often necessary to set
        * the element's height and width so that the background image is visible.
        *
        * @method applyIcon
        * @param {Element} element The element to which the background is
        * applied.
        * @param {String|Number} icon The name or index of the icon to apply.
-       * @param {Number} scale (optional, defaults to 1) A scaling factor 
+       * @param {Number} scale (optional, defaults to 1) A scaling factor
        * with which the icon can be magnified.
        * @return {Element} The icon element.
        */
@@ -1182,7 +1182,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
           var icon = element._icon || document.createElement('div');
           var style = icon.style;
           style.backgroundImage = 'url(' + this.src + ')';
-          style.backgroundPosition = (-offset.offsetX * scale + 'px') + 
+          style.backgroundPosition = (-offset.offsetX * scale + 'px') +
              ' ' + (-offset.offsetY * scale + 'px');
           style.backgroundSize = scale === 1 ? 'auto' :
              this.width * scale + 'px';
@@ -1201,10 +1201,10 @@ html /deep/ .paper-shadow-bottom-z-5 {
 <polymer-element name="core-icon" attributes="src icon alt" assetpath="bower_components/core-icon/">
 <script>
 (function() {
-  
+
   // mono-state
   var meta;
-  
+
   Polymer('core-icon', {
 
     /**
@@ -1233,7 +1233,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
      * If alt is present and not empty, it will set the element's role to img and add an aria-label whose content matches alt.
      * If alt is present and is an empty string, '', it will hide the element from the accessibility layer
      * If alt is not present, it will set the element's role to img and the element will fallback to using the icon attribute for its aria-label.
-     * 
+     *
      * @attribute alt
      * @type string
      * @default ''
@@ -1334,7 +1334,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
     }
 
   });
-  
+
 })();
 </script>
 
@@ -1428,15 +1428,15 @@ html /deep/ .paper-shadow-bottom-z-5 {
         root.insertBefore(svg, root.firstElementChild);
         return svg;
       },
-      
+
       /**
        * Tell users of the iconset, that the set has loaded.
-       * This finds all elements matching the selector argument and calls 
+       * This finds all elements matching the selector argument and calls
        * the method argument on them.
        * @method updateIcons
-       * @param selector {string} css selector to identify iconset users, 
+       * @param selector {string} css selector to identify iconset users,
        * defaults to '[icon]'
-       * @param method {string} method to call on found elements, 
+       * @param method {string} method to call on found elements,
        * defaults to 'updateIcon'
        */
       updateIcons: function(selector, method) {
@@ -1450,7 +1450,7 @@ html /deep/ .paper-shadow-bottom-z-5 {
           }
         }
       }
-      
+
 
     });
 
@@ -1845,7 +1845,7 @@ polyfill-next-selector { content: ':host .indent'; }
 (function() {
 
   Polymer('core-toolbar', {
-    
+
     /**
      * Controls how the items are aligned horizontally.
      * Options are `start`, `center`, `end`, `between` and `around`.
@@ -1855,7 +1855,7 @@ polyfill-next-selector { content: ':host .indent'; }
      * @default ''
      */
     justify: '',
-    
+
     /**
      * Controls how the items are aligned horizontally when they are placed
      * in the middle.
@@ -1866,7 +1866,7 @@ polyfill-next-selector { content: ':host .indent'; }
      * @default ''
      */
     middleJustify: '',
-    
+
     /**
      * Controls how the items are aligned horizontally when they are placed
      * at the bottom.
@@ -1877,19 +1877,19 @@ polyfill-next-selector { content: ':host .indent'; }
      * @default ''
      */
     bottomJustify: '',
-    
+
     justifyChanged: function(old) {
       this.updateBarJustify(this.$.topBar, this.justify, old);
     },
-    
+
     middleJustifyChanged: function(old) {
       this.updateBarJustify(this.$.middleBar, this.middleJustify, old);
     },
-    
+
     bottomJustifyChanged: function(old) {
       this.updateBarJustify(this.$.bottomBar, this.bottomJustify, old);
     },
-    
+
     updateBarJustify: function(bar, justify, old) {
       if (old) {
         bar.removeAttribute(this.toLayoutAttrName(old));
@@ -1898,11 +1898,11 @@ polyfill-next-selector { content: ':host .indent'; }
         bar.setAttribute(this.toLayoutAttrName(justify), '');
       }
     },
-    
+
     toLayoutAttrName: function(value) {
       return value === 'between' ? 'justified' : value + '-justified';
     }
-    
+
   });
 
 })();
@@ -1959,8 +1959,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   display: none;
 }
 
-/* 
-mode: scroll 
+/*
+mode: scroll
 */
 :host([mode=scroll]) #mainContainer {
   overflow: visible;
@@ -2035,7 +2035,7 @@ mode: cover
     publish: {
       /**
        * Controls header and scrolling behavior. Options are
-       * `standard`, `seamed`, `waterfall`, `waterfall-tall`, `scroll` and 
+       * `standard`, `seamed`, `waterfall`, `waterfall-tall`, `scroll` and
        * `cover`. Default is `standard`.
        *
        * `standard`: The header is a step above the panel. The header will consume the
@@ -2107,20 +2107,20 @@ mode: cover
       tallMode: {'waterfall-tall': 1},
       outerScroll: {'scroll': 1}
     },
-    
+
     ready: function() {
       this.scrollHandler = this.scroll.bind(this);
       this.addListener();
     },
-    
+
     detached: function() {
       this.removeListener(this.mode);
     },
-    
+
     addListener: function() {
       this.scroller.addEventListener('scroll', this.scrollHandler);
     },
-    
+
     removeListener: function(mode) {
       var s = this.getScrollerForMode(mode);
       s.removeEventListener('scroll', this.scrollHandler);
@@ -2155,7 +2155,7 @@ mode: cover
     get header() {
       return this.$.headerContent.getDistributedNodes()[0];
     },
-    
+
     getScrollerForMode: function(mode) {
       return this.modeConfigs.outerScroll[mode] ?
           this.$.outerContainer : this.$.mainContainer;
@@ -3154,7 +3154,7 @@ Polymer('core-style', {
 
   publish: {
     /**
-     * The `ref` property should be set if the `core-style` element is a 
+     * The `ref` property should be set if the `core-style` element is a
      * consumer of styles. Set it to the `id` of the desired `core-style`
      * element.
      *
@@ -3170,7 +3170,7 @@ Polymer('core-style', {
   refMap: CoreStyle.refMap,
 
   /**
-   * The `list` is a map of all `core-style` producers stored by `id`. It 
+   * The `list` is a map of all `core-style` producers stored by `id`. It
    * should be considered readonly. It's useful for nesting one `core-style`
    * inside another.
    *
@@ -3189,7 +3189,7 @@ Polymer('core-style', {
       this.registerRef(this.ref);
       if (!window.ShadowDOMPolyfill) {
         this.require();
-      }  
+      }
     }
   },
 
@@ -3221,7 +3221,7 @@ Polymer('core-style', {
       }
       this.list[this.id].push(this);
     } else {
-      this.list[this.id] = this;  
+      this.list[this.id] = this;
     }
   },
 
@@ -3229,7 +3229,7 @@ Polymer('core-style', {
   _completeProvide: function() {
     this.createShadowRoot();
     this.domObserver = new MutationObserver(this.domModified.bind(this))
-        .observe(this.shadowRoot, {subtree: true, 
+        .observe(this.shadowRoot, {subtree: true,
         characterData: true, childList: true});
     this.provideContent();
   },
@@ -3330,7 +3330,7 @@ Polymer('core-style', {
 
   ensureStyleElement: function() {
     if (!this.styleElement) {
-      this.styleElement = window.ShadowDOMPolyfill ? 
+      this.styleElement = window.ShadowDOMPolyfill ?
           this.makeShimStyle() :
           this.makeRootStyle();
     }
@@ -3365,7 +3365,7 @@ Polymer('core-style', {
       if (host) {
         var typeExtension = host.hasAttribute('is');
         var name = typeExtension ? host.getAttribute('is') : host.localName;
-        selector = WebComponents.ShadowCSS.makeScopeSelector(name, 
+        selector = WebComponents.ShadowCSS.makeScopeSelector(name,
             typeExtension);
       }
       this._scopeSelector = selector;
@@ -3397,7 +3397,7 @@ Polymer('core-style', {
     }
 
     return rgb.replace(/rgb\(([^,]*),([^,]*),([^,]*)\)/, function(m, a, b, c) {
-      return 'rgb(' + cycleChannel(a) + ',' + cycleChannel(b) + ', ' 
+      return 'rgb(' + cycleChannel(a) + ',' + cycleChannel(b) + ', '
           + cycleChannel(c) + ')';
     });
   },
@@ -4072,12 +4072,12 @@ polyfill-next-selector {
   <template is="auto-binding" id="mainPage">
     <core-header-panel>
       <core-toolbar>
-        Hue Hackathon
+        Philips Hue
       </core-toolbar>
       <div vertical="" layout="">
         <div horizontal="" layout="">
           <paper-card>
-            <paper-input-decorator floatinglabel="" label="Wat kan ik voor je doen...">
+            <paper-input-decorator floatinglabel="" label="Ask something...">
               <input type="text" name="askInput" value="{{vCmdResult}}">
             </paper-input-decorator>
           </paper-card>
@@ -4099,7 +4099,7 @@ polyfill-next-selector {
 
    <core-ajax id="coreAjax" url="http://192.168.1.10/api/newdeveloper/lights/1/state/" handleas="json" method="PUT" body="{&quot;on&quot;:false}" on-core-response="document.handleResponse()"></core-ajax>
 
-  <voice-player autoplay="" text="Hello, welcome to hue?" accent="en-US" id="vPlayer"></voice-player>
+  <voice-player autoplay="" text="Hallo wat kan ik voor je doen ?" content="nl" id="vPlayer"></voice-player>
   <voice-recognition continuous="false" id="vCmd"></voice-recognition>
   <script>
     var mainPage = document.getElementById("mainPage");
@@ -4164,6 +4164,15 @@ polyfill-next-selector {
     function doAction(command){
       if(mainPage.databaseCmd[command]) {
         coreAjax.setAttribute("url",mainPage.databaseCmd[command].url);
+        coreAjax.setAttribute("body",mainPage.databaseCmd[command].body);
+
+        isActivated = true;
+        voicePlayer.speak();
+      }
+    }
+  </script>
+
+</body></html>url",mainPage.databaseCmd[command].url);
         coreAjax.setAttribute("body",mainPage.databaseCmd[command].body);
 
         isActivated = true;
