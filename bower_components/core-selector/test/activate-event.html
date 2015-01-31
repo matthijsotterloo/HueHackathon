@@ -10,8 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>core-selector-template-repeat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>core-selector-activate-event</title>
 
   <script src="../../webcomponentsjs/webcomponents.js"></script>
   <script src="../../web-component-tester/browser.js"></script>
@@ -27,30 +26,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body>
 
-  <core-selector id="selector" selected="1">
-    <template id="itemsTemplate" repeat="{{items}}">
-      <div name="{{}}">{{}}</div>
-    </template>
+  <core-selector id="selector" selected="0">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
   </core-selector>
 
   <script>
 
     var s = document.querySelector('#selector');
-    var t = document.querySelector('#itemsTemplate');
 
-    suite('<template repeat...>', function() {
+    suite('activate event', function() {
 
-      test('supports repeated children', function(done) {
-        t.model = {items: ['Item1', 'Item2', 'Item3', "Item4"]};
-        asyncPlatformFlush(function() {
-          // check items
-          assert.equal(s.items.length, 4);
+      test('activates on tap', function(done) {
+        assert.equal(s.selected, '0');
+
+        async.nextTick(function() {
+          // select Item 2
+          s.children[1].dispatchEvent(new CustomEvent('tap', {bubbles: true}));
+        });
+
+        s.addEventListener("core-activate", function(event) {
+          assert.equal(event.detail.item, s.children[1]);
           assert.equal(s.selected, 1);
-          // check selectedItem
-          var item = s.selectedItem;
-          assert.equal(s.items[1], item);
-          // check selected class
-          assert.isTrue(item.classList.contains('core-selected'));
           done();
         });
       });
