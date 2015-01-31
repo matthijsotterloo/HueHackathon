@@ -6,13 +6,13 @@ var express        =        require("express");
 var bodyParser     =        require("body-parser");
 var app            =        express();
 
-/** 
- * 
+/**
+ *
  **/
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/',function(req,res){
-  	res.end("Hi ! I am a server <3");
+  	res.end("Hoi, je hebt hier niks te zoeken dus ja, doei!");
 });
 
 app.post('/',function(req,res){

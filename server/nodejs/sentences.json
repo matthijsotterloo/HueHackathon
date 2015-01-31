@@ -1,3 +1,9 @@
 {
-  "main lights":1
+  "lamp oranje":1,
+  "lamp geel":2,
+  "lamp wit":3,
+  "lamp licht paars":4,
+  "lamp donker paars":5,
+  "alles oranje":6,
+  "psv":7
 }

@@ -70,7 +70,7 @@
       method="POST"
       params=''></core-ajax>
 
-  <voice-player autoplay text="Hello, welcome to hue?" accent="en-US" id="vPlayer"></voice-player>
+  <voice-player autoplay text="Hallo, wat kan ik voor je doen?" accent="nl-NL" id="vPlayer"></voice-player>
   <voice-recognition continuous="false" id="vCmd"></voice-recognition>
   <script>
     var mainPage = document.getElementById("mainPage");
@@ -81,18 +81,24 @@
     mainPage.itsListening = false;
     mainPage.commandLog = [];
 
-    mainPage.commandLog.unshift("main lights");
+    mainPage.commandLog.unshift("lamp donker paars");
+    mainPage.commandLog.unshift("lamp licht paars");
+    mainPage.commandLog.unshift("lamp wit");
+    mainPage.commandLog.unshift("lamp geel");
+    mainPage.commandLog.unshift("lamp oranje");
+    mainPage.commandLog.unshift("alles oranje");
+
 
     /** VOICE RECOGNITION **/
     var isActivated = false;
 
     mainPage.startRecognition = function(){
-      voicePlayer.setAttribute("text","Gaan we regelen...");
+      voicePlayer.setAttribute("text","Let's do that...");
       voiceRecognition.start();
     }
 
     mainPage.repeat = function(e,detail,sender){
-      voicePlayer.setAttribute("text","Actie herhalen...");
+      voicePlayer.setAttribute("text","I'm now doing it for you...");
       voicePlayer.textChanged();
       doAction(sender.parentNode.parentNode.querySelector("span").innerText);
     }
