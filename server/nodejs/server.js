@@ -24,8 +24,8 @@ app.post('/',function(req,res){
 
 	console.log("Received : "+command);
 	if(!sentencesDb[command]) {
-		console.log("[O] Command not recognized : "+command);
-		res.end("Command not recognized");
+		console.log("[O] Commando niet herkend: "+command);
+		res.end("Commando niet herkend");
 		return false;
 	}
 

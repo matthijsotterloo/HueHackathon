@@ -92,12 +92,12 @@
     var isActivated = false;
 
     mainPage.startRecognition = function(){
-      voicePlayer.setAttribute("text","Let's do that...");
+      voicePlayer.setAttribute("text","Gaan we regelen...");
       voiceRecognition.start();
     }
 
     mainPage.repeat = function(e,detail,sender){
-      voicePlayer.setAttribute("text","I'm now doing it for you...");
+      voicePlayer.setAttribute("text","Klaar...");
       voicePlayer.textChanged();
       doAction(sender.parentNode.parentNode.querySelector("span").innerText);
     }

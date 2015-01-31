@@ -5,7 +5,7 @@
     "url": "http://192.168.1.10/api/newdeveloper/lights/3/state/",
     "body":"{\"on\":true, \"sat\":255, \"bri\":160,\"hue\":10000}",
     "speech": {
-      "onSuccess": "Lamp is now orange",
+      "onSuccess": "Lamp is nu oranje",
       "onError": "An error occured"
     }
   },
@@ -15,7 +15,7 @@
     "url": "http://192.168.1.10/api/newdeveloper/lights/3/state/",
     "body":"{\"on\":true, \"sat\":255, \"bri\":160,\"hue\":20000}",
     "speech": {
-      "onSuccess": "Lamp is now yellow",
+      "onSuccess": "Lamp is nu geel",
       "onError": "An error occured"
     }
   },
@@ -25,7 +25,7 @@
     "url": "http://192.168.1.10/api/newdeveloper/lights/3/state/",
     "body":"{\"on\":true, \"sat\":255, \"bri\":160,\"hue\":30000}",
     "speech": {
-      "onSuccess": "Lamp is now white",
+      "onSuccess": "Lamp is nu wit",
       "onError": "An error occured"
     }
   },
@@ -35,7 +35,7 @@
     "url": "http://192.168.1.10/api/newdeveloper/lights/3/state/",
     "body":"{\"on\":true, \"sat\":255, \"bri\":160,\"hue\":40000}",
     "speech": {
-      "onSuccess": "Lamp is now light purple",
+      "onSuccess": "Lamp is nu licht paars",
       "onError": "An error occured"
     }
   },
@@ -45,7 +45,7 @@
     "url": "http://192.168.1.10/api/newdeveloper/lights/3/state/",
     "body":"{\"on\":true, \"sat\":255, \"bri\":160,\"hue\":50000}",
     "speech": {
-      "onSuccess": "Lamp is now dark purple",
+      "onSuccess": "Lamp is nu donker paars",
       "onError": "An error occured"
     }
   },
@@ -55,7 +55,7 @@
     "url": "http://192.168.1.10/api/newdeveloper/groups/1/action",
     "body":"{\"on\":true, \"sat\":255, \"bri\":255,\"hue\":10000}",
     "speech": {
-      "onSuccess": "Everything is now orange",
+      "onSuccess": "Alles is nu oranje",
       "onError": "An error occured"
     }
   }
