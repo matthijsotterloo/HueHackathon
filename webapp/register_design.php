@@ -15,10 +15,9 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Hue | Inloggen</title>
+	<title>Hue | Registreren</title>
 
 	<meta name="description" content="">
-	<meta name="author" content="Akshay Kumar">
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" /> 
