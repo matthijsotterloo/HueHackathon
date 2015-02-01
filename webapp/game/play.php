@@ -18,7 +18,7 @@ if(empty($_GET['join']) && empty($_GET['create'])) {
 
 if(isset($_GET['create'])) {
 	$stmt = $db->prepare('INSERT INTO games (users) VALUES (?)');
-	$stmt->execute(array($players));
+	$stmt->execute(array($_GET['players']));
 	$gameid = $db->lastInsertId();
 }
 
