@@ -1,8 +1,7 @@
 <?php
 $data = $_POST['image'];
 
-list($type, $data) = explode(';', $data);
-list(, $data)      = explode(',', $data);
+$data = substr($data, 22, strlen($data));
 $data = base64_decode($data);
 
 file_put_contents('image.png', $data);
