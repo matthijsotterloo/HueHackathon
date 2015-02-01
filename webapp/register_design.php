@@ -43,7 +43,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     	<div class="row">
     	<div class="col-lg-4 col-lg-offset-4">
         	<h3 class="text-center">PSV meets hue</h3>
-            <p class="text-center">Log hieronder in met je persoonlijke gegevens</p>
+            <p class="text-center">Maak hieronder een persoonlijk account aan</p>
             <hr class="clean">
             <form action="register_design.php" method="POST" role="form">
               <div class="form-group input-group">
