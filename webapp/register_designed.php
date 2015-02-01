@@ -3,7 +3,7 @@ require_once('auth.inc.php');
 if(!empty($_POST['username']) && !empty($_POST['password'])) {
     $auth = new Auth();
     $auth->register($_POST['username'], $_POST['password']);
-    header('Location: /login.php?message=You%20can%20now%20log%20in.');
+    header('Location: /register_designed.php?message=You%20can%20now%20log%20in.');
     die();
 }
 ?>
@@ -15,7 +15,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Hue | Inloggen</title>
+	<title>Hue | Registreren</title>
 
 	<meta name="description" content="">
 	<meta name="author" content="Akshay Kumar">
@@ -44,7 +44,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     	<div class="row">
     	<div class="col-lg-4 col-lg-offset-4">
         	<h3 class="text-center">PSV meets hue</h3>
-            <p class="text-center">Log hieronder in met je persoonlijke gegevens</p>
+            <p class="text-center">Maak hieronder een account aan</p>
             <hr class="clean">
             <form action="login.php" method="POST" role="form">
               <div class="form-group input-group">
