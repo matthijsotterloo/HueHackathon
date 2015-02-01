@@ -1,11 +1,15 @@
 <?php
-include('libraries/base.inc.php');
-include('libraries/login.inc.php');
-if(!empty($_POST['username'])) {
-    $loginstatus = login($_POST['username'], $_POST['password']);
-}
-if(!empty($_POST['logout'])) {
-    logout();
+require_once('auth.inc.php');
+if(!empty($_POST['username']) && !empty($_POST['password'])) {
+    $auth = new Auth();
+    $status = $auth->login($_POST['username'], $_POST['password']);
+    if($status == 'SUCCESS') {
+        header('Location: /dashboard.php');
+        die();
+    } else {
+        header('Location: /login.php?message=Login%20failed.');
+        die();
+    }
 }
 ?>
 <html lang="en">
