@@ -15,12 +15,12 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Hue | Registreren</title>
+    <title>Hue | Registreren</title>
 
-	<meta name="description" content="">
+    <meta name="description" content="">
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" /> 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" /> 
 
     <!-- Fonts  -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,300' rel='stylesheet' type='text/css'>
@@ -28,7 +28,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     <!-- Base Styling  -->
     <link rel="stylesheet" href="assets/css/app/app.v1.css" />
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -36,25 +36,25 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     <![endif]-->
 
 </head>
-<body>	
+<body>  
     
-	
+    
     <div class="container">
-    	<div class="row">
-    	<div class="col-lg-4 col-lg-offset-4">
-        	<h3 class="text-center">PSV meets hue</h3>
+        <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <h3 class="text-center">PSV meets hue</h3>
             <p class="text-center">Maak hieronder een persoonlijk account aan</p>
             <hr class="clean">
             <form action="http://huehackathon.nl/webapp/register_design.php" method="POST" role="form">
               <div class="form-group input-group">
-              	<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam">
               </div>
               <div class="form-group input-group">
-              	<span class="input-group-addon"><i class="fa fa-key"></i></span>
+                <span class="input-group-addon"><i class="fa fa-key"></i></span>
                 <input type="password" class="form-control" name="password" placeholder="Wachtwoord">
               </div>
-        	  <button type="submit" class="btn btn-purple btn-block">Registreren</button>
+              <button type="submit" class="btn btn-purple btn-block">Registreren</button>
             </form>
             <hr>
         </div>
@@ -64,7 +64,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     
     
     <!-- JQuery v1.9.1 -->
-	<script src="assets/js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="assets/js/plugins/underscore/underscore-min.js"></script>
     <!-- Bootstrap -->
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
@@ -75,15 +75,15 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
     <!-- NanoScroll -->
     <script src="assets/js/plugins/nicescroll/jquery.nicescroll.min.js"></script>
     
-	
+    
     
     
     <!-- Custom JQuery -->
-	<script src="assets/js/app/custom.js" type="text/javascript"></script>
+    <script src="assets/js/app/custom.js" type="text/javascript"></script>
     
 
     
-	<script>
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
