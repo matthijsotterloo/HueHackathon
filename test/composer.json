@@ -1,0 +1,20 @@
+{
+    "name": "elanman/simple-quiz",
+    "description": "A simple quiz framework written in PHP using slim micro-framework, idiorm and bootstrap",
+    "license": "Apache-2.0",
+    "require": {
+        "slim/slim": "2.*",
+        "j4mie/idiorm": "dev-master",
+        "ircmaxell/password-compat": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.4.*@dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "files" : ["SimpleQuiz/Utils/Base/setup.php"],
+        "psr-0": {
+            "SimpleQuiz": ""
+        }
+    }
+}
