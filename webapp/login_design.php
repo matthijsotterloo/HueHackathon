@@ -23,7 +23,6 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
 	<title>Hue | Inloggen</title>
 
 	<meta name="description" content="">
-	<meta name="author" content="Akshay Kumar">
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" /> 
