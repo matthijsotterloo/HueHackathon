@@ -5,8 +5,10 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
 	$status = $auth->login($_POST['username'], $_POST['password']);
 	if($status == 'SUCCESS') {
 		header('Location: dashboard.php');
+		die();
 	} else {
 		header('Location: login.php?message=Login%20failed.');
+		die();
 	}
 }
 ?>
