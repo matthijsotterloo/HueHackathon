@@ -21,6 +21,11 @@ if(isset($_GET['create'])) {
 	$stmt = $db->prepare('INSERT INTO games (users) VALUES (?)');
 	$stmt->execute(array(''));
 	$gameid = $db->lastInsertId();
+} else if(isset($_GET['join'])) {
+	//$players = implode(';', $_GET['players']);
+	$stmt = $db->prepare('INSERT INTO games (users) VALUES (?)');
+	$stmt->execute(array(''));
+	$gameid = $db->lastInsertId();
 }
 
 $userid = $_COOKIE['userid'];
