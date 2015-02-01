@@ -16,9 +16,12 @@ $userid = $_COOKIE['userid'];
 <form action="play.php" method="GET">
 Bestaande game joinen: <input type="text" autocomplete="off" name="join"><br>
 <input type="submit" value="Join">
-</form>
+</form><br><br>
 <form action="play.php" method="GET">
-<input type="hidden" name="create" value="1"><br>
+<input type="hidden" name="create" value="1">
+<input type="text" name="players[]" autocomplete="off"><br>
+<input type="text" name="players[]" autocomplete="off"><br>
+<input type="text" name="players[]" autocomplete="off"><br>
 <input type="submit" value="Nieuwe game aanmaken">
 </form>
 </body>
