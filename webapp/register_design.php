@@ -45,7 +45,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
         	<h3 class="text-center">PSV meets hue</h3>
             <p class="text-center">Maak hieronder een persoonlijk account aan</p>
             <hr class="clean">
-            <form action="register_design.php" method="POST" role="form">
+            <form action="http://huehackathon.nl/webapp/register_design.php" method="POST" role="form">
               <div class="form-group input-group">
               	<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam">
