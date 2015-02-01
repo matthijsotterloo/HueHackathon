@@ -10,7 +10,7 @@ if($check != true) {
 }
 
 if(empty($_GET['join']) && empty($_GET['create'])) {
-	header('Location: index.php');
+	header('Location: ./');
 }
 
 $userid = $_COOKIE['userid'];
