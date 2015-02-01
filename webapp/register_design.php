@@ -54,14 +54,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
               	<span class="input-group-addon"><i class="fa fa-key"></i></span>
                 <input type="password" class="form-control" name="password" placeholder="Wachtwoord">
               </div>
-              <div class="form-group">
-                <label class="cr-styled">
-                    <input type="checkbox" ng-model="todo.done">
-                    <i class="fa"></i> 
-                </label>
-                Blijf aangemeld
-              </div>
-        	  <button type="submit" class="btn btn-purple btn-block">Inloggen</button>
+        	  <button type="submit" class="btn btn-purple btn-block">Registreren</button>
             </form>
             <hr>
         </div>
