@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin');
+
 $data = $_POST['image'];
 
 $data = substr($data, 22, strlen($data));
