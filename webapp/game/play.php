@@ -18,8 +18,8 @@ if(empty($_GET['join']) && empty($_GET['create'])) {
 
 if(isset($_GET['create'])) {
 	$players = implode(';', $_GET['players']);
-	$stmt = $db->prepare('INSERT INTO games');
-	$stmt->execute();
+	$stmt = $db->prepare('INSERT INTO games (users) VALUES (?)');
+	$stmt->execute(array($players));
 	$gameid = $db->lastInsertId();
 }
 
@@ -28,6 +28,6 @@ $userid = $_COOKIE['userid'];
 <html>
 <body>
 <h1>Game</h1>
-<h2>Je gameid is 666</h2>
+<h2>Je gameid is <?php echo($gameid); ?></h2>
 </body>
 </html>
