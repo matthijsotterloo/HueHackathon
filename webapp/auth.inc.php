@@ -122,6 +122,8 @@ class Auth {
 		setcookie('sessionid', $sessionid);
 		
 		//return($userid . ';' . $sessionid);
+		
+		return('SUCCESS');
 	}
 	
 	function cleanup() { //Get rid of any expired sessions
