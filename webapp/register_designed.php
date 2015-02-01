@@ -53,7 +53,7 @@ if(!empty($_POST['username']) && !empty($_POST['password'])) {
             <hr class="clean">
             <form action="login.php" method="POST" role="form">
               <div class="form-group input-group">
-              	<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              	<span class="input-group-addon"><i class="fa fa-user"></i></span>
                 <input type="text" class="form-control" name="username" placeholder="Gebruikersnaam">
               </div>
               <div class="form-group input-group">
