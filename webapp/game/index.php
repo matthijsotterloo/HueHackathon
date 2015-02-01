@@ -1,5 +1,5 @@
 <?php
-require_once('auth.inc.php');
+require_once('../auth.inc.php');
 $auth = new Auth();
 
 $check = $auth->logincheck();
@@ -21,8 +21,5 @@ Bestaande game joinen: <input type="text" autocomplete="off" name="join"><br>
 <input type="hidden" name="create" value="1"><br>
 <input type="submit" value="Nieuwe game aanmaken">
 </form>
-<?php
-echo($userid);
-?>
 </body>
 </html>
